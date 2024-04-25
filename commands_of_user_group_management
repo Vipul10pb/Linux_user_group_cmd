@@ -1,0 +1,52 @@
+  724  cat /etc/passwd
+  725  useradd user1
+  726  cat /etc/passwd
+  727  passwd user1
+  728  usermod -u 2000 user1
+  729  cat /etc/passwd
+  730  usermod -g 2000 user1
+  731  cat /etc/passwd
+  732  usermod -l userlog user1
+  733  cat /etc/passwd
+  734  usermod -d / user1
+  735  usermod -d / userlog
+  736  cat /etc/passwd
+  737  userdel -r user2
+  738  userdel -r user1
+  739  userdel -r userlog
+  740  cat /etc/passwd
+  741  groupadd grp1
+  742  cat /etc/group
+  743  groupdel grp1
+  744  groupdel mygrp
+  745  groupdel mygrp group1
+  746  groupdel  group1
+  747  groupdel  group2
+  748  groupdel  group3
+  749  groupadd grp1
+  750  gpasswd grp1
+  751  cat /etc/passwd
+  752  cat /etc/gshadow
+  753  usermod -G grp1 user1
+  754  useradd user1
+  755  usermod -G grp1 user1
+  756  cat /etc/passwd
+  757  useradd user1
+  758  usermod -g grp1 user1
+  759  useradd user2
+  760  useradd user3
+  761  useradd user4
+  762  gpasswd -M user1 user2 user3 user4
+  763  gpasswd -M  user2 user3 user4
+  764  gpasswd -M  user2 user3 user4 grp1
+  765  cat /etc/group
+  766  gpasswd -M  user2 user3 user4 grp1
+  767  gpasswd -M  user2, user3, user4, grp1
+  768  gpasswd -M  user2,user3,user4 grp1
+  769  cat /etc/group
+  770  gpasswd -d user2 grp1
+  771  cat /etc/group
+  772  groupadd -g 2000 grp2
+  773  groupmod -g 2001 grp2
+  774  groupmod -n grp3 grp2
+
